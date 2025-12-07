@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div>
-        <h1>ROCK PAPPER SCISSORS</h1>
-        
+    <div class="h-screen w-full flex flex-col justify-center items-center">
+        <h1 class="text-4xl font-semibold">ROCK PAPPER SCISSOR</h1>
+
+        <div class="mt-20 flex gap-60 mb-15">
+            <div>
+                <h1 class="text-2xl font-semibold mb-3">Your Choice</h1>
+                <h2 class="text-lg font-medium mb-3">Total Wins: <span id="humanScore">0</span></h2>
+                <input class="border-2 border-black rounded-sm p-1 outline-none text-gray-500" type="text" placeholder="Rock, Papper or Scissor">
+                <button onclick="playGame()" class="bg-blue-600 px-3 py-1 rounded-md text-white font-semibold">Submit</button>
+            </div>
+            
+            <div>
+                <h1 class="text-2xl font-semibold mb-3">Computer Choice</h1>
+                <h2 class="text-lg font-medium mb-3">Total Wins: <span id="computerScore">0</span></h2>
+                <p id="comHand">Computer Hand</p>
+            </div>
+        </div>
+        <div class="result"></div>
     </div>
+
+    <script src="./main.js"></script>
 </body>
 </html>
